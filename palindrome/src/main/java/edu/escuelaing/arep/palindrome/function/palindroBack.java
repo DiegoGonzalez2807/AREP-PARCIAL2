@@ -9,19 +9,22 @@ public class palindroBack {
      * @param cadena
      * @return
      */
-    public boolean isPalindrome(String cadena){
-        List<String> chainSplitted = List.of(cadena.split(""));
+    public String isPalindrome(String cadena){
+        System.out.println("ENTRA");
+        String[] chainSplitted = cadena.split("");
+        System.out.println(chainSplitted);
         int count = 0;
-        int finalCount = chainSplitted.size()-1;
-        while(count != finalCount){
-            if(chainSplitted.get(count) == chainSplitted.get(finalCount)){
-                count +=1;
+        int finalCount = chainSplitted.length-1;
+        for(int i = 0;i<chainSplitted.length;i++){
+            System.out.println("revisa"+chainSplitted[count]+"con el final "+chainSplitted[finalCount]);
+            if(chainSplitted[i].equals(chainSplitted[finalCount])){
                 finalCount -=1;
+                System.out.println(count+","+finalCount);
             }
             else{
-                return false;
+                return "No es palindromo";
             }
         }
-        return true;
+        return "Es palindromo";
     }
 }

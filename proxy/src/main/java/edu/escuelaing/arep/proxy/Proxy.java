@@ -10,10 +10,24 @@ import static spark.Spark.*;
  * @author diego.gonzalez-g
  */
 public class Proxy {
-
+    
     public static void main(String[] args) {
         port(getPort());
-        StaticFilesLocation
+        staticFileLocation("/public");
+        get("/", (req, res) -> {
+            res.redirect("/index.html");
+            return null;
+        });
+        get("/index.html", (req, res) -> {
+            res.redirect("/index.html");
+            return null;
+        });
+        get("/*", (req, res) -> {
+            System.out.println(req.queryString());
+            System.out.println(getValue(req.queryString()));
+            return null;
+        });
+        
     }
 
     public static int getPort(){
@@ -31,8 +45,8 @@ public class Proxy {
      * @return
      */
     public static String getValue(String endpoint){
-        if(endpoint.contains("?")){
-            String value = endpoint.split("?")[1].split("=")[1];
+        if(endpoint.contains("=")){
+            String value = endpoint.split("=")[1];
             System.out.println(value);
             return value;
         }
