@@ -38,4 +38,5 @@ Para este caso se hacen dos dependencias para que el RoundRobin pueda escoger en
 En este caso se genera un listener spark donde este escucha peticiones para redirigir al html y para escuchar a los dos servicios de back 
 Se hace algoritmo de RoundRobin 
 
-
+##VIDEO
+https://photos.app.goo.gl/agoSTTpzDy2YmNcZA
