@@ -30,7 +30,7 @@ public class Proxy {
             res.status(200);
             res.type("application/json");
             RR.changeServer();
-            return RR.getResponse(getValue(req.queryString()));
+            return RR.connect(getValue(req.queryString()));
         });
         
     }
