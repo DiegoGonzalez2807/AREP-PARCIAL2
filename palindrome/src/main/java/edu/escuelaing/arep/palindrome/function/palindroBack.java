@@ -10,13 +10,11 @@ public class palindroBack {
      * @return
      */
     public String isPalindrome(String cadena){
-        System.out.println("ENTRA");
         String[] chainSplitted = cadena.split("");
         System.out.println(chainSplitted);
         int count = 0;
         int finalCount = chainSplitted.length-1;
         for(int i = 0;i<chainSplitted.length;i++){
-            System.out.println("revisa"+chainSplitted[count]+"con el final "+chainSplitted[finalCount]);
             if(chainSplitted[i].equals(chainSplitted[finalCount])){
                 finalCount -=1;
                 System.out.println(count+","+finalCount);
