@@ -34,4 +34,8 @@ Para este caso se hacen dos dependencias para que el RoundRobin pueda escoger en
 
 ![Image text](https://github.com/DiegoGonzalez2807/AREP-PARCIAL2/blob/master/images/SEGUNDA%20MAQUINA.png)
 
+##FRONTEND PALINDROME
+En este caso se genera un listener spark donde este escucha peticiones para redirigir al html y para escuchar a los dos servicios de back 
+Se hace algoritmo de RoundRobin 
+
 
