@@ -2,15 +2,18 @@
 
 package edu.escuelaing.arep.proxy;
 
-import spark.Service.StaticFiles;
 import static spark.Spark.*;
+
+import edu.escuelaing.arep.proxy.RoundRobin.roundRobin;
 
 /**
  *
  * @author diego.gonzalez-g
  */
 public class Proxy {
-    
+
+    public static roundRobin RR = new roundRobin();
+
     public static void main(String[] args) {
         port(getPort());
         staticFileLocation("/public");
@@ -22,10 +25,12 @@ public class Proxy {
             res.redirect("/index.html");
             return null;
         });
+        //path para retornar la respuesta que viene de los servicios
         get("/*", (req, res) -> {
-            System.out.println(req.queryString());
-            System.out.println(getValue(req.queryString()));
-            return null;
+            res.status(200);
+            res.type("application/json");
+            RR.changeServer();
+            return RR.getResponse(getValue(req.queryString()));
         });
         
     }
