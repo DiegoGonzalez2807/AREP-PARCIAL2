@@ -7,7 +7,7 @@ Diseñe un prototipo de sistema de microservicios que tenga un servicio (En la f
 
 ## Backend
 Para el backend del palindromo se crea mediante Spark un Listener en el cual reciba los endpoints "/espalindromo?value={}". La respuesta de este listener es en formato JSON para que el frontend lo pueda entender e imprimir
-![Image text]()
+![Image text](https://github.com/DiegoGonzalez2807/AREP-PARCIAL2/blob/master/images/PRIMERA.png)
 
 De igual manera se revisa el query que se hace y así retornar el valor mediante la función "GetValue", la cual se presenta en la misma clase.
 
@@ -19,4 +19,19 @@ Otro ejemplo, "12785" no es una palíndromo, pero "127858721" si es una palíndr
 
 
 Para esto lo que se piensa es convertir a ua lista de Strings la cadena dada por el usuario y así ir comparando desde la primera hasta la última posición
-![Image text]()
+![Image text](https://github.com/DiegoGonzalez2807/AREP-PARCIAL2/blob/master/images/SEGUNDA.png)
+
+
+### FUNCIONAMIENTO BACKEND AWS
+
+Para este caso se hacen dos dependencias para que el RoundRobin pueda escoger entre dos distintos servicios. Se muestran imagenes del funcionamiento de estas en la maquina
+
+![Image text](https://github.com/DiegoGonzalez2807/AREP-PARCIAL2/blob/master/images/SEGUNDA.png)
+
+
+![Image text](https://github.com/DiegoGonzalez2807/AREP-PARCIAL2/blob/master/images/SEGUNDA.png)
+
+
+![Image text](https://github.com/DiegoGonzalez2807/AREP-PARCIAL2/blob/master/images/SEGUNDA.png)
+
+
