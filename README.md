@@ -26,12 +26,12 @@ Para esto lo que se piensa es convertir a ua lista de Strings la cadena dada por
 
 Para este caso se hacen dos dependencias para que el RoundRobin pueda escoger entre dos distintos servicios. Se muestran imagenes del funcionamiento de estas en la maquina
 
-![Image text](https://github.com/DiegoGonzalez2807/AREP-PARCIAL2/blob/master/images/SEGUNDA.png)
+![Image text](https://github.com/DiegoGonzalez2807/AREP-PARCIAL2/blob/master/images/INSTANCIAS.png)
 
 
-![Image text](https://github.com/DiegoGonzalez2807/AREP-PARCIAL2/blob/master/images/SEGUNDA.png)
+![Image text](https://github.com/DiegoGonzalez2807/AREP-PARCIAL2/blob/master/images/PRIMERA%20MAQUINA.png)
 
 
-![Image text](https://github.com/DiegoGonzalez2807/AREP-PARCIAL2/blob/master/images/SEGUNDA.png)
+![Image text](https://github.com/DiegoGonzalez2807/AREP-PARCIAL2/blob/master/images/SEGUNDA%20MAQUINA.png)
 
 
